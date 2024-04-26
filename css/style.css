@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /****** General ***********/
 * {
   margin: 0px;
@@ -5,10 +6,44 @@
   box-sizing: border-box;
 }
 
+/* Polices
+Logo et titres : Shrikhand
+Texte : Roboto */
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 320px;
+  max-width: 768px; /*à enlever plus tard avec le media queries */
+}
+
+.main-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .btn {
   width: 218px;
   height: 50px;
   border-radius: 25px;
+  border-style: solid;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/****** Header ***********/
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.navbar .navbar__logo {
+  width: 162px;
 }
 
 /*# sourceMappingURL=style.css.map */
