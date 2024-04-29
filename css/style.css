@@ -4,11 +4,43 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Polices
-Logo et titres : Shrikhand
-Texte : Roboto */
+
+Texte et titres: Roboto
+Texte, button, footer: 1rem medium
+
+Homepage:
+h1 et h2: 1.5rem (24px)
+h3: 1.125rem (18px) bold
+Feature: 1.125rem (18px) light
+Texte cards: 1.063rem (17px) light
+
+Menus:
+h1: 1.75rem (28px) Shrikhand
+h2: 1rem (16px) light
+h3: 1.125rem medium (18px)
+Texte cards: 0.938 (15px) light */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+p, button {
+  font-size: 1rem;
+}
+
+/* Feature, footer, flèche back header, prix */
 body {
   display: flex;
   justify-content: center;
@@ -33,7 +65,9 @@ body {
   width: 218px;
   height: 50px;
   border-radius: 25px;
-  border-style: solid;
+  border-style: hidden;
+  color: white;
+  background: linear-gradient(22deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -41,9 +75,136 @@ body {
 .navbar {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 63px;
 }
 .navbar .navbar__logo {
   width: 162px;
+}
+
+/****** Main ***********/
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  gap: 17px;
+  color: #353535;
+  background-color: #EAEAEA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+section.reservation {
+  display: flex;
+  background-color: #F6F6F6;
+}
+section.reservation .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+}
+
+section.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
+  padding: 20px;
+}
+section.fonctionnement .fonctionnement-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 27px;
+}
+section.fonctionnement .fonctionnement-card .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  background-color: #F6F6F6;
+  border-color: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+section.fonctionnement .fonctionnement-card .card .card-content {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+section.restaurants {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
+  padding: 20px;
+  background-color: #F6F6F6;
+}
+section.restaurants .content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+section.restaurants .content .card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 0px 0px 5px 0px;
+}
+section.restaurants .content .card img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0px 0px;
+}
+section.restaurants .content .card .card-content {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 15px;
+}
+section.restaurants .content .card .card-content .card-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+section.restaurants .content .card .card-content .card-content-text h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+section.restaurants .content .card .card-content .card-content-text p {
+  font-size: 1.063rem;
+  font-weight: lighter;
+}
+
+.footer {
+  color: white;
+  background-color: #353535;
+}
+.footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  padding: 20px;
+}
+.footer .footer-content img {
+  height: 20px;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(7deg) brightness(102%) contrast(104%);
+}
+.footer .footer-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  list-style-type: none;
+}
+.footer .footer-content ul a {
+  display: grid;
+  grid-template-columns: 15px auto; /* Pas le bon code, tester autre chose pour que "Mentions légales" s'affiche bien */
+  gap: 7px;
 }
 
 /*# sourceMappingURL=style.css.map */
