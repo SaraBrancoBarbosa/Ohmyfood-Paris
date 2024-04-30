@@ -75,7 +75,7 @@ body {
 }
 
 .btn {
-    width: 218px;
+    width: 200px;
     height: 50px;
     border-radius: 25px;
     border-style: hidden;
@@ -227,9 +227,9 @@ section.restaurants {
             gap: 7px;
             list-style-type: none;
 
-            a {
+            .footer_link {
                 display: grid;
-                grid-template-columns: 15px auto; /* Pas le bon code, tester autre chose pour que "Mentions légales" s'affiche bien */
+                grid-template-columns: 15px auto;
                 gap: 7px;
             }
         }
