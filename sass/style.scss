@@ -24,7 +24,7 @@ p, .btn {
     font-size: 1rem;
 }
 
-.fa-heart {                     /* Comment rendre ce fa en light ? Et mettre le coeur un peu plus bas dans le content */
+.fa-heart {    /* Comment rendre ce fa en light ? Et mettre le coeur un peu plus bas dans le content */
     font-size: 1.6rem;
 }
 
@@ -54,10 +54,6 @@ body {
     box-sizing: border-box;
     min-width: 320px;
     max-width: 768px; /*à enlever plus tard avec le media queries */
-
-    img {
-        height: 275px;
-    }
 }
 
 .btn {
@@ -79,6 +75,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 63px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ca marche pô lô */
     
     .navbar__logo {
         width: 162px;
@@ -138,7 +135,6 @@ section.fonctionnement {
             width: 100%;
             height: 72px;
             background-color: $bg-color;
-            border-color: $bg-color;
             border-radius: 20px;
             @include card-shadow;
 
@@ -255,6 +251,10 @@ section.restaurants {
     align-items: center;
     gap: 0px;
     background-color: white;
+
+    img {
+        height: 275px;
+    }
 }
 
 .menu {
@@ -270,6 +270,7 @@ section.restaurants {
     .menu__title {
         display: flex;
         justify-content: space-between;
+        width: 100%;
 
         h1 {
             font-size: 1.75rem;
