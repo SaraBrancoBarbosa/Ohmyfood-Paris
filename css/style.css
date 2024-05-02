@@ -47,12 +47,6 @@ body {
   height: 275px;
 }
 
-.main-sections {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .btn {
   width: 200px;
   height: 50px;
@@ -75,6 +69,14 @@ body {
 }
 
 /****** Homepage ***********/
+.main-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: #F6F6F6;
+}
+
 .feature {
   display: flex;
   justify-content: center;
@@ -89,7 +91,6 @@ body {
 
 section.reservation {
   display: flex;
-  background-color: #F6F6F6;
 }
 section.reservation .content {
   display: flex;
@@ -104,7 +105,8 @@ section.fonctionnement {
   flex-direction: column;
   width: 100%;
   gap: 25px;
-  padding: 20px;
+  padding: 50px 20px;
+  background-color: white;
 }
 section.fonctionnement .fonctionnement-card {
   display: grid;
@@ -143,8 +145,7 @@ section.restaurants {
   flex-direction: column;
   width: 100%;
   gap: 25px;
-  padding: 20px;
-  background-color: #F6F6F6;
+  padding: 20px 20px 50px 20px;
 }
 section.restaurants .content {
   display: flex;
@@ -210,6 +211,14 @@ section.restaurants .content .card .card-content .card-content-text p {
 }
 
 /****** Menu ***********/
+.main-sections__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  background-color: white;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
