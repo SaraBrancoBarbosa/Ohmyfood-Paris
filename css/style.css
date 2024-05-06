@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/****** General ***********/
 * {
   margin: 0px;
   padding: 0px;
@@ -31,33 +29,6 @@ body {
   width: 100%;
 }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 320px;
-  max-width: 768px; /* à enlever plus tard avec le media queries */
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 50px;
-  border-radius: 25px;
-  border-style: hidden;
-  color: white;
-  background: linear-gradient(-2deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-.fa-heart { /* Comment rendre ce fa en light ? */
-  font-size: 1.6rem;
-}
-
-/****** Header ***********/
 .navbar {
   display: flex;
   justify-content: center;
@@ -79,41 +50,53 @@ body {
   width: 162px;
 }
 
-/****** Footer ***********/
+/* Footer */
 .footer {
   color: white;
   background-color: #353535;
 }
-.footer .footer-content {
+.footer .footer__content {
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 16px;
   padding: 20px;
 }
-.footer .footer-content img {
+.footer .footer__content img {
   height: 20px;
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(7deg) brightness(102%) contrast(104%);
 }
-.footer .footer-content ul {
+.footer .footer__content ul {
   display: flex;
   flex-direction: column;
   gap: 7px;
   list-style-type: none;
 }
-.footer .footer-content ul .footer__div {
+.footer .footer__content ul .footer__div {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
-.footer .footer-content ul .footer__div__link {
+.footer .footer__content ul .footer__div__link {
   display: grid;
   grid-template-columns: 15px auto;
   gap: 7px;
   font-weight: 600;
 }
 
-/****** Homepage ***********/
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border-style: hidden;
+  color: white;
+  background: linear-gradient(-2deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
 .main-sections {
   display: flex;
   flex-direction: column;
@@ -154,12 +137,12 @@ section.fonctionnement {
   padding: 50px 20px;
   background-color: white;
 }
-section.fonctionnement .fonctionnement-card {
+section.fonctionnement .fonctionnement__card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 27px;
 }
-section.fonctionnement .fonctionnement-card .card {
+section.fonctionnement .fonctionnement__card .card {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -169,22 +152,22 @@ section.fonctionnement .fonctionnement-card .card {
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-section.fonctionnement .fonctionnement-card .card .card-content {
+section.fonctionnement .fonctionnement__card .card .card__content {
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 20px;
   font-weight: 600;
 }
-section.fonctionnement .fonctionnement-card .card .card-content .fa-solid {
+section.fonctionnement .fonctionnement__card .card .card__content .fa-solid {
   color: #7E7E7E;
   font-size: 1.5rem;
 }
-section.fonctionnement .fonctionnement-card .card .card-content .fa-store {
+section.fonctionnement .fonctionnement__card .card .card__content .fa-store {
   color: #9356DC;
   font-size: 1.5rem;
 }
-section.fonctionnement .fonctionnement-card .card .card-content h3 {
+section.fonctionnement .fonctionnement__card .card .card__content h3 {
   font-size: 1rem;
 }
 
@@ -211,27 +194,26 @@ section.restaurants .content .card img {
   height: 200px;
   border-radius: 20px 20px 0px 0px;
 }
-section.restaurants .content .card .card-content {
+section.restaurants .content .card .card__content {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   padding: 15px;
 }
-section.restaurants .content .card .card-content .card-content-text {
+section.restaurants .content .card .card__content .card__content__text {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-section.restaurants .content .card .card-content .card-content-text h3 {
+section.restaurants .content .card .card__content .card__content__text h3 {
   font-size: 1.125rem;
   font-weight: bold;
 }
-section.restaurants .content .card .card-content .card-content-text p {
+section.restaurants .content .card .card__content .card__content__text p {
   font-size: 1.063rem;
   font-weight: lighter;
 }
 
-/****** Menu ***********/
 .main-sections__menu {
   display: flex;
   flex-direction: column;
@@ -288,14 +270,14 @@ section.menu__choice .menu__card .card {
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-section.menu__choice .menu__card .card .card-content {
+section.menu__choice .menu__card .card .card__content {
   display: flex;
   flex-direction: column;
   gap: 5px;
   font-size: 0.938rem;
   font-weight: lighter;
 }
-section.menu__choice .menu__card .card .card-content h3 {
+section.menu__choice .menu__card .card .card__content h3 {
   font-size: 1.125rem;
   font-weight: 600;
 }
@@ -304,6 +286,19 @@ section.menu__choice .menu__card .card .price {
   align-items: end;
   font-weight: bold;
   color: #353535;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 320px;
+  max-width: 768px;
+}
+
+.fa-heart {
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
