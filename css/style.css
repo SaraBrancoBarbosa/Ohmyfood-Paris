@@ -49,8 +49,8 @@ body {
   border-radius: 25px;
   border-style: hidden;
   color: white;
-  background: linear-gradient(22deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(-2deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .fa-heart { /* Comment rendre ce fa en light ? */
@@ -65,7 +65,7 @@ body {
   position: relative;
   z-index: 999;
   height: 63px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 .navbar .navbar__back {
   display: flex;
@@ -131,7 +131,7 @@ body {
   gap: 17px;
   color: #353535;
   background-color: #EAEAEA;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 section.reservation {
@@ -167,7 +167,7 @@ section.fonctionnement .fonctionnement-card .card {
   height: 72px;
   background-color: #F6F6F6;
   border-radius: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 section.fonctionnement .fonctionnement-card .card .card-content {
   display: flex;
@@ -286,7 +286,7 @@ section.menu__choice .menu__card .card {
   padding: 15px;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 section.menu__choice .menu__card .card .card-content {
   display: flex;
