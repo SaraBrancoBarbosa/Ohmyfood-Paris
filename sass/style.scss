@@ -4,6 +4,7 @@
 @import "./layouts/header"; // Header
 @import "./layouts/footer"; // Footer
 @import "./components/buttons"; // Boutons
+@import "./components/icons"; // Icon coeur
 @import "./components/loader"; // Le loader ira ici :D
 @import "./pages/home"; // La Homepage
 @import "./pages/restaurants"; // La page type pour les restaurants
@@ -15,8 +16,4 @@
     width: 100%;
     min-width: 320px;
     max-width: 768px; // à enlever plus tard avec le media queries
-}
-
-.fa-heart { // Comment rendre ce fa en light ? Le ranger dans components ou variables
-    font-size: 1.6rem;
 }
