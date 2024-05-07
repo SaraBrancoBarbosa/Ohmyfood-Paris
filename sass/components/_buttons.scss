@@ -9,4 +9,8 @@
     color: white;
     background: linear-gradient(-2deg, $primary-color 0%, $secondary-color 100%); 
     @include btn-shadow;
+    transition-duration: 400ms;
+    &:hover {
+        opacity: 0.85;
+    }
 }
