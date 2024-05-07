@@ -1,5 +1,5 @@
 @import "./base/base"; // Le css général
-@import "./utils/variables"; // Les couleurs (peut-être fonts plus tard ?)
+@import "./base/variables"; // Les couleurs (peut-être fonts plus tard ?)
 @import "./utils/mixins"; // Box-shadows pour le moment
 @import "./layouts/header"; // Header
 @import "./layouts/footer"; // Footer
@@ -8,12 +8,3 @@
 @import "./components/loader"; // Le loader ira ici :D
 @import "./pages/home"; // La Homepage
 @import "./pages/restaurants"; // La page type pour les restaurants
-
-.main-container { // Est-ce que cette class va dans _base.scss ?
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 320px;
-    max-width: 768px; // à enlever plus tard avec le media queries
-}

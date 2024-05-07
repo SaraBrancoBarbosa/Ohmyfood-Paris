@@ -14,6 +14,13 @@ h3 {
   font-size: 1.125rem;
 }
 
+h4 {
+  font-size: 1.125rem;
+  font-family: "Shrikhand", sans-serif;
+  font-weight: normal;
+  margin-bottom: 9px;
+}
+
 p {
   font-size: 1rem;
 }
@@ -27,6 +34,15 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 320px;
+  max-width: 768px;
 }
 
 .navbar {
@@ -54,33 +70,24 @@ body {
   color: white;
   background-color: #353535;
 }
-.footer .footer__content {
+.footer .footer__container {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 16px;
+  gap: 7px;
   padding: 20px;
 }
-.footer .footer__content img {
-  height: 20px;
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(7deg) brightness(102%) contrast(104%);
-}
-.footer .footer__content ul {
+.footer .footer__container ul {
   display: flex;
   flex-direction: column;
   gap: 7px;
   list-style-type: none;
 }
-.footer .footer__content ul .footer__div {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-.footer .footer__content ul .footer__div__link {
-  display: grid;
-  grid-template-columns: 15px auto;
-  gap: 7px;
+.footer .footer__container .footer__content--bold {
   font-weight: 600;
+}
+.footer .footer__container .footer__content--bold .fa-solid {
+  width: 15px;
 }
 
 .btn {
@@ -181,38 +188,38 @@ section.restaurants {
   gap: 25px;
   padding: 20px 20px 50px 20px;
 }
-section.restaurants .content {
+section.restaurants .cards {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-section.restaurants .content .card {
+section.restaurants .cards .card {
   background-color: white;
   border-radius: 20px;
   padding: 0px 0px 5px 0px;
 }
-section.restaurants .content .card img {
+section.restaurants .cards .card img {
   object-fit: cover;
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0px 0px;
 }
-section.restaurants .content .card .card__content {
+section.restaurants .cards .card .card__content {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   padding: 15px;
 }
-section.restaurants .content .card .card__content .card__content__text {
+section.restaurants .cards .card .card__content .card__content__text {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-section.restaurants .content .card .card__content .card__content__text h3 {
+section.restaurants .cards .card .card__content .card__content__text h3 {
   font-size: 1.125rem;
   font-weight: bold;
 }
-section.restaurants .content .card .card__content .card__content__text p {
+section.restaurants .cards .card .card__content .card__content__text p {
   font-size: 1.063rem;
   font-weight: lighter;
 }
@@ -247,6 +254,7 @@ section.restaurants .content .card .card__content .card__content__text p {
 .menu .menu__title h1 {
   font-size: 1.75rem;
   font-family: "Shrikhand", sans-serif;
+  font-weight: normal;
 }
 
 section.menu__choice {
@@ -289,15 +297,6 @@ section.menu__choice .menu__card .card .price {
   align-items: end;
   font-weight: bold;
   color: #353535;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 320px;
-  max-width: 768px;
 }
 
 /*# sourceMappingURL=style.css.map */
