@@ -267,7 +267,7 @@ section.fonctionnement .fonctionnement__card .card .card__content h3 {
 
 section.restaurants {
   width: 100%;
-  padding: 0px 20px;
+  padding: 0px 20px 30px 20px;
 }
 section.restaurants .restaurants__content {
   display: flex;
