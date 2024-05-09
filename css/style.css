@@ -72,6 +72,11 @@ body {
   height: 63px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
+@media (min-width: 1025px) {
+  .navbar {
+    height: 96px;
+  }
+}
 .navbar .navbar__back {
   display: flex;
   font-size: 1.5rem;
@@ -124,6 +129,7 @@ body {
 @media (min-width: 1025px) {
   .footer .footer__container .footer__content ul {
     flex-direction: row;
+    gap: 16px;
   }
 }
 .footer .footer__container .footer__content .footer__content--bold {

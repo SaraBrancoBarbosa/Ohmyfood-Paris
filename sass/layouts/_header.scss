@@ -7,6 +7,10 @@
     height: 63px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 
+    @media (min-width: 1025px) {
+        height: 96px;
+    }
+
     .navbar__back {
         display: flex;
         font-size: 1.5rem;
