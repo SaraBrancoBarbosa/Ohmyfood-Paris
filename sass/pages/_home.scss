@@ -35,7 +35,7 @@ section.reservation {
     }
 }
 
-.fonctionnement {
+section.fonctionnement {
     width: 100%;
     padding: 50px 20px;
     background-color: white;
@@ -46,7 +46,7 @@ section.reservation {
         gap: 25px;
 
         @media (min-width: 1025px) {
-            max-width: 1440px;
+            max-width: 1080px;
             margin: 0 auto;
         }
     }
@@ -92,15 +92,18 @@ section.reservation {
 }
 
 section.restaurants {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    gap: 25px;
-    padding: 20px 20px 50px 20px;
+    padding: 0px 20px;
 
-    @media (min-width: 1025px) {
-        max-width: 1440px;
-        padding: 0px 0px 30px 0px;
+    .restaurants__content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        @media (min-width: 1025px) {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
     }
 
     .cards {
@@ -110,7 +113,7 @@ section.restaurants {
 
         @media (min-width: 769px) {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(420px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(360px,1fr));
             row-gap: 50px;
             column-gap: 100px;
         }

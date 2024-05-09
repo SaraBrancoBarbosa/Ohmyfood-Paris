@@ -1,13 +1,13 @@
 /* Idée :
 Faire une assiette au milieu
 Fourchette apparait de la gauche (slide in ?)
-Couteau de la droite (tranchant tourné vers l'assiette)
+Une fois la fourchette arrivée, couteau apparaît de la droite (tranchant tourné vers l'assiette)
 
 Couleur de fond : $tertiary-color
  */
 .loader {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: 8px solid $bg-color;
   }

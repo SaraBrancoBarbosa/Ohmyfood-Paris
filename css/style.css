@@ -167,13 +167,13 @@ body {
 /* Idée :
 Faire une assiette au milieu
 Fourchette apparait de la gauche (slide in ?)
-Couteau de la droite (tranchant tourné vers l'assiette)
+Une fois la fourchette arrivée, couteau apparaît de la droite (tranchant tourné vers l'assiette)
 
 Couleur de fond : $tertiary-color
  */
 .loader {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border: 8px solid #F6F6F6;
 }
@@ -215,28 +215,28 @@ section.reservation .content {
   }
 }
 
-.fonctionnement {
+section.fonctionnement {
   width: 100%;
   padding: 50px 20px;
   background-color: white;
 }
-.fonctionnement .fonctionnement__content {
+section.fonctionnement .fonctionnement__content {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 @media (min-width: 1025px) {
-  .fonctionnement .fonctionnement__content {
-    max-width: 1440px;
+  section.fonctionnement .fonctionnement__content {
+    max-width: 1080px;
     margin: 0 auto;
   }
 }
-.fonctionnement .fonctionnement__card {
+section.fonctionnement .fonctionnement__card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 27px;
 }
-.fonctionnement .fonctionnement__card .card {
+section.fonctionnement .fonctionnement__card .card {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -246,36 +246,38 @@ section.reservation .content {
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-.fonctionnement .fonctionnement__card .card .card__content {
+section.fonctionnement .fonctionnement__card .card .card__content {
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 20px;
   font-weight: 600;
 }
-.fonctionnement .fonctionnement__card .card .card__content .fa-solid {
+section.fonctionnement .fonctionnement__card .card .card__content .fa-solid {
   color: #7E7E7E;
   font-size: 1.5rem;
 }
-.fonctionnement .fonctionnement__card .card .card__content .fa-store {
+section.fonctionnement .fonctionnement__card .card .card__content .fa-store {
   color: #9356DC;
   font-size: 1.5rem;
 }
-.fonctionnement .fonctionnement__card .card .card__content h3 {
+section.fonctionnement .fonctionnement__card .card .card__content h3 {
   font-size: 1rem;
 }
 
 section.restaurants {
+  width: 100%;
+  padding: 0px 20px;
+}
+section.restaurants .restaurants__content {
   display: flex;
   flex-direction: column;
-  width: 100%;
   gap: 25px;
-  padding: 20px 20px 50px 20px;
 }
 @media (min-width: 1025px) {
-  section.restaurants {
-    max-width: 1440px;
-    padding: 0px 0px 30px 0px;
+  section.restaurants .restaurants__content {
+    max-width: 1080px;
+    margin: 0 auto;
   }
 }
 section.restaurants .cards {
@@ -286,7 +288,7 @@ section.restaurants .cards {
 @media (min-width: 769px) {
   section.restaurants .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     row-gap: 50px;
     column-gap: 100px;
   }
