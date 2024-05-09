@@ -35,13 +35,21 @@ section.reservation {
     }
 }
 
-section.fonctionnement {
-    display: flex;
-    flex-direction: column;
+.fonctionnement {
     width: 100%;
-    gap: 25px;
     padding: 50px 20px;
     background-color: white;
+
+    .fonctionnement__content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        @media (min-width: 1025px) {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+    }
 
     .fonctionnement__card {
         display: grid;
@@ -89,6 +97,11 @@ section.restaurants {
     width: 100%;
     gap: 25px;
     padding: 20px 20px 50px 20px;
+
+    @media (min-width: 1025px) {
+        max-width: 1440px;
+        padding: 0px 0px 30px 0px;
+    }
 
     .cards {
         display: flex;

@@ -1,5 +1,5 @@
-@import "./base/base"; // Le css général
 @import "./base/variables"; // Les couleurs (peut-être fonts plus tard ?)
+@import "./base/base"; // Le css général
 @import "./utils/mixins"; // Box-shadows pour le moment
 @import "./layouts/header"; // Header
 @import "./layouts/footer"; // Footer
