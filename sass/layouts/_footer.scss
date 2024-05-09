@@ -6,21 +6,44 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: 7px;
+        gap: 16px;
         padding: 20px; 
+
+        @media (min-width: 1025px) {
+            flex-direction: row-reverse;
+            gap: 50px;
+            align-items: end;
+            height: 114px;
+            padding-right: 50px;
+        }
     
-        ul {
+        .footer__content {
             display: flex;
             flex-direction: column;
             gap: 7px;
-            list-style-type: none;
-        }
 
-        .footer__content--bold {
-            font-weight: 600;
-            
-            .fa-solid {
-                width: 15px;
+            @media (min-width: 1025px) {
+                flex-direction: row;
+                gap: 50px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                list-style-type: none;
+
+                @media (min-width: 1025px) {
+                    flex-direction: row;
+                }
+            }
+
+            .footer__content--bold {
+                font-weight: 600;
+                
+                .fa-solid {
+                    width: 15px;
+                }
             }
         }
     }

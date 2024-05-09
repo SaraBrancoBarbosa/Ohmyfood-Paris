@@ -21,6 +21,10 @@
     border-radius: 50px 50px 0px 0px;
     gap: 40px;
 
+    @media (min-width: 769px) {
+        max-width: 1055px;
+    }
+
     .menu__title {
         display: flex;
         justify-content: space-between;
@@ -31,6 +35,11 @@
             font-family: "Shrikhand", sans-serif;
             font-weight: normal;
         }
+
+        @media (min-width: 1025px) {
+            justify-content: center;
+            gap: 24px;
+        }
     }
 }
 
@@ -39,11 +48,19 @@ section.menu__choice {
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    &:hover #slide {
+        transition: 1s;
+        left: 0;
+    }
 
     h2 {
         font-size: 1rem;
         font-weight: lighter;
         text-transform: uppercase;
+    }
+
+    @media (min-width: 1025px) {
+        max-width: 634px;
     }
 
     .menu__card {

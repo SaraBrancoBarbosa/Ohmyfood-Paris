@@ -12,5 +12,6 @@
     transition-duration: 400ms;
     &:hover {
         opacity: 0.85;
+        //filter: brightness(1.15);
     }
 }
