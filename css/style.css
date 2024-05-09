@@ -246,6 +246,17 @@ section.fonctionnement .fonctionnement__card .card {
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
+section.fonctionnement .fonctionnement__card .card p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  color: white;
+  background-color: #9356DC;
+  transform: translate(-12px, 0%);
+}
 section.fonctionnement .fonctionnement__card .card .card__content {
   display: flex;
   align-items: center;
