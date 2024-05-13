@@ -322,7 +322,6 @@ section.restaurants .cards a .new {
   font-size: 0.875rem;
   background-color: #99E2D0;
   transform: translate(-15px, -110px);
-  /* z-index: 1; */
   grid-area: 1/1;
   margin: auto 0px auto auto;
 }
@@ -432,7 +431,7 @@ section.menu__choice h2::after {
   display: flex;
   border-bottom: 3px #99E2D0 solid;
   width: 40px;
-  height: 8px;
+  height: 7px;
 }
 @media (min-width: 1025px) {
   section.menu__choice {
