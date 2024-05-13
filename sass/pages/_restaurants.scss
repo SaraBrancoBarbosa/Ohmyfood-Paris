@@ -7,6 +7,8 @@
         height: 275px;
         width: 100%;
         object-fit: cover;
+        position: absolute;
+        z-index: 1;
 
         @media (min-width: 1025px) {
             height: 383px;
@@ -23,9 +25,13 @@
     padding: 40px 20px;
     border-radius: 50px 50px 0px 0px;
     gap: 40px;
+    position: relative;
+    z-index: 2;
+    margin-top: 226px;
 
-    @media (min-width: 769px) {
+    @media (min-width: 1025px) {
         max-width: 1055px;
+        margin-top: 338px;
     }
 
     .menu__title {
