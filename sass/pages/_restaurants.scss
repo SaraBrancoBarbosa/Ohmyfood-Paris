@@ -7,6 +7,10 @@
         height: 275px;
         width: 100%;
         object-fit: cover;
+
+        @media (min-width: 1025px) {
+            height: 383px;
+        }
     }
 }
 

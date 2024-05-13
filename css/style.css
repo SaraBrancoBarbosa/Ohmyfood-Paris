@@ -368,6 +368,11 @@ section.restaurants .cards a .card .card__content .card__content__text p {
   width: 100%;
   object-fit: cover;
 }
+@media (min-width: 1025px) {
+  .main-sections__menu img {
+    height: 383px;
+  }
+}
 
 .menu {
   display: flex;
