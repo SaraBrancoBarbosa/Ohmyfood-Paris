@@ -235,6 +235,7 @@ section.fonctionnement .fonctionnement__card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 27px;
+  margin-left: 10px;
 }
 section.fonctionnement .fonctionnement__card .card {
   display: flex;
