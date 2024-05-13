@@ -58,6 +58,14 @@ section.menu__choice {
         text-transform: uppercase;
     }
 
+    h2::after {
+        content: "";
+        display: flex;
+        border-bottom: 3px $tertiary-color solid;
+        width: 40px;
+        height: 8px;
+    }
+
     @media (min-width: 1025px) {
         max-width: 634px;
     }
