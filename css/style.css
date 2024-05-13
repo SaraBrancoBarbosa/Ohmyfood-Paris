@@ -305,12 +305,12 @@ section.restaurants .cards {
     column-gap: 100px;
   }
 }
-section.restaurants .cards a {
+section.restaurants .cards .cards__overlap {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-section.restaurants .cards a .new {
+section.restaurants .cards .cards__overlap .new {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,38 +321,38 @@ section.restaurants .cards a .new {
   font-weight: bold;
   font-size: 0.875rem;
   background-color: #99E2D0;
-  transform: translate(-15px, -110px);
+  transform: translate(-13px, -110px);
   grid-area: 1/1;
   margin: auto 0px auto auto;
 }
-section.restaurants .cards a .card {
+section.restaurants .cards .cards__overlap .card {
   background-color: white;
   border-radius: 20px;
   padding: 0px 0px 5px 0px;
   grid-area: 1/1;
 }
-section.restaurants .cards a .card img {
+section.restaurants .cards .cards__overlap .card img {
   object-fit: cover;
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0px 0px;
 }
-section.restaurants .cards a .card .card__content {
+section.restaurants .cards .cards__overlap .card .card__content {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   padding: 15px;
 }
-section.restaurants .cards a .card .card__content .card__content__text {
+section.restaurants .cards .cards__overlap .card .card__content .card__content__text {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-section.restaurants .cards a .card .card__content .card__content__text h3 {
+section.restaurants .cards .cards__overlap .card .card__content .card__content__text h3 {
   font-size: 1.125rem;
   font-weight: bold;
 }
-section.restaurants .cards a .card .card__content .card__content__text p {
+section.restaurants .cards .cards__overlap .card .card__content .card__content__text p {
   font-size: 1.063rem;
   font-weight: lighter;
 }

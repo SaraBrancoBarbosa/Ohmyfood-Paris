@@ -131,8 +131,7 @@ section.restaurants {
             column-gap: 100px;
         }
 
-        // Pour permettre au Nouveau (.new) d'overlap
-        a {
+        .cards__overlap {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
@@ -148,7 +147,7 @@ section.restaurants {
                 font-weight: bold;
                 font-size: 0.875rem;
                 background-color: $tertiary-color;
-                transform: translate(-15px, -110px);
+                transform: translate(-13px, -110px);
                 grid-area: 1 / 1;
                 margin: auto 0px auto auto;
             }
