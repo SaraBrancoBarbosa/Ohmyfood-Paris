@@ -172,7 +172,7 @@ body {
   background-color: rgba(255, 255, 255, 0.0823529412);
   opacity: 0;
   z-index: 1;
-  transition: ease-in-out 250ms;
+  transition: 250ms ease-in-out;
 }
 
 .heart-like {
@@ -182,17 +182,30 @@ body {
   stroke: black;
   stroke-width: 30px;
 }
-.heart-like .heart-like__fill {
-  transform-origin: 0%;
-}
-.heart-like .heart-like__fill:hover {
-  transition-duration: 400ms;
-  transition: transform 2000ms;
-  transform-origin: 50% 0%;
-  fill: #FF79DA;
-  transform: scaleY(1);
+.heart-like__fill:hover {
+  transform-origin: bottom;
+  transition: 1s;
+  animation: 2s linear 0s heart-like__fill;
+  animation-fill-mode: both;
 }
 
+@keyframes heart-like__fill {
+  0% {
+    transform: translateY(0);
+    fill: white;
+    stroke: white;
+  }
+  50% {
+    transform: translateY(0.5);
+    fill: #9356DC;
+    stroke: #9356DC;
+  }
+  100% {
+    transform: translateY(1);
+    fill: #FF79DA;
+    stroke: #FF79DA;
+  }
+}
 /* Idée :
 Faire une assiette au milieu (stroke-dasharray et stroke-dashoffset pour animer le contour de l'assiette ?)
 Fourchette apparait de la gauche (slide in ?)

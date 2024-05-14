@@ -66,14 +66,14 @@ section.menu__choice {
         font-size: 1rem;
         font-weight: lighter;
         text-transform: uppercase;
-    }
 
-    h2::after {
-        content: "";
-        display: flex;
-        border-bottom: 3px $tertiary-color solid;
-        width: 40px;
-        height: 7px;
+        &::after {
+            content: "";
+            display: flex;
+            border-bottom: 3px $tertiary-color solid;
+            width: 40px;
+            height: 7px;
+        }
     }
 
     @media (min-width: 1025px) {

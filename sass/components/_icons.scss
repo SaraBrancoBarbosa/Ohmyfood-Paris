@@ -5,16 +5,33 @@
     stroke: black;
     stroke-width: 30px;
 
-    .heart-like__fill {
-        transform-origin: 0%;
-
+    &__fill {
         &:hover {
-            transition-duration: 400ms;
-            transition: transform 2000ms;
-            transform-origin: 50% 0%;
-            fill: $secondary-color;
-            transform: scaleY(1);
-            //fill: linear-gradient(-2deg, $primary-color 0%, $secondary-color 100%);
+            transform-origin: bottom;
+            transition: 1s;
+            animation: 2s linear 0s heart-like__fill;
+            animation-fill-mode: both;
         }
+    }    
+}
+
+@keyframes heart-like__fill{
+    0% {
+        transform: translateY(0);
+        fill: white;
+        stroke: white;
+    }
+    50% {
+        transform: translateY(0.5);
+        fill: $primary-color;
+        stroke: $primary-color;
+    }
+    100% {
+        transform: translateY(1);
+        fill: $secondary-color;
+        stroke: $secondary-color;
+
     }
 }
+
+//fill: linear-gradient(-2deg, $primary-color 0%, $secondary-color 100%);
