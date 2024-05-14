@@ -1,9 +1,11 @@
 /* Idée :
-Faire une assiette au milieu
+Faire une assiette au milieu (stroke-dasharray et stroke-dashoffset pour animer le contour de l'assiette ?)
 Fourchette apparait de la gauche (slide in ?)
 Une fois la fourchette arrivée, couteau apparaît de la droite (tranchant tourné vers l'assiette)
 
 Couleur de fond : $tertiary-color
+
+Transition douce pour le passage du loader à l'index
  */
 .loader {
     width: 100px;

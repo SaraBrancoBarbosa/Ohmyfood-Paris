@@ -152,24 +152,52 @@ body {
   background: linear-gradient(-2deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   transition-duration: 400ms;
+  position: relative;
+  z-index: 1;
 }
 .btn:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
-.btn:hover {
-  opacity: 0.85;
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  opacity: 0;
+  z-index: -1;
 }
 
-.fa-heart {
-  font-size: 1.6rem;
+.heart-like {
+  height: 21px;
+  width: 24px;
+  fill: white;
+  stroke: black;
+  stroke-width: 30px;
+}
+.heart-like .heart-like__fill {
+  transform-origin: 0%;
+}
+.heart-like .heart-like__fill:hover {
+  transition: transform 2000ms;
+  transform-origin: 50% 0%;
+  fill: #FF79DA;
+  transform: scaleY(1);
 }
 
 /* Idée :
-Faire une assiette au milieu
+Faire une assiette au milieu (stroke-dasharray et stroke-dashoffset pour animer le contour de l'assiette ?)
 Fourchette apparait de la gauche (slide in ?)
 Une fois la fourchette arrivée, couteau apparaît de la droite (tranchant tourné vers l'assiette)
 
 Couleur de fond : $tertiary-color
+
+Transition douce pour le passage du loader à l'index
  */
 .loader {
   width: 100px;

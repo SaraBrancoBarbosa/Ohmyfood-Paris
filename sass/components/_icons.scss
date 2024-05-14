@@ -1,3 +1,19 @@
-.fa-heart { // Comment rendre ce fa en light ?
-    font-size: 1.6rem;
+.heart-like {
+    height: 21px;
+    width: 24px;
+    fill: white;
+    stroke: black;
+    stroke-width: 30px;
+
+    .heart-like__fill {
+        transform-origin: 0%;
+
+        &:hover {
+            transition: transform 2000ms;
+            transform-origin: 50% 0%;
+            fill: $secondary-color;
+            transform: scaleY(1);
+            //fill: linear-gradient(-2deg, $primary-color 0%, $secondary-color 100%);
+        }
+    }
 }
