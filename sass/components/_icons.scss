@@ -9,6 +9,7 @@
         transform-origin: 0%;
 
         &:hover {
+            transition-duration: 400ms;
             transition: transform 2000ms;
             transform-origin: 50% 0%;
             fill: $secondary-color;
