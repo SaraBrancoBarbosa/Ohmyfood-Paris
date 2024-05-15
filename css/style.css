@@ -65,6 +65,33 @@ body {
 }
 
 /* Shadows for buttons and cards */
+/* Restaurants page: animation of the menu growing */
+#entrees {
+  animation: grow ease 1s;
+}
+
+#plats {
+  animation: grow ease 1s 500ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+#desserts {
+  animation: grow ease 1s 1000ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .navbar {
   display: flex;
   justify-content: center;
@@ -514,32 +541,6 @@ section.menu__choice .menu__card .card .price {
   color: #353535;
 }
 
-#entrees {
-  animation: grow ease 1s;
-}
-
-#plats {
-  animation: grow ease 1s 500ms;
-  opacity: 0;
-  animation-fill-mode: forwards;
-}
-
-#desserts {
-  animation: grow ease 1s 1000ms;
-  opacity: 0;
-  animation-fill-mode: forwards;
-}
-
-@keyframes grow {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 /****** Media queries ***********/
 /* Small devices (Mobile phones, less/equal than 768px) */
 /* Medium devices (tablets, less/equal than 1024px) */

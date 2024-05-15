@@ -11,3 +11,31 @@
 @mixin card-shadow {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
+
+/* Restaurants page: animation of the menu growing */
+#entrees {
+    animation: grow ease 1s;
+}
+
+#plats {
+    animation: grow ease 1s 500ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+#desserts {
+    animation: grow ease 1s 1000ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+  @keyframes grow {
+    0% {
+      opacity: 0;
+      transform: scale(.3);
+    }
+    100% { 
+        opacity: 1;
+        transform: scale(1); 
+    }
+  }
