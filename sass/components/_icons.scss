@@ -4,32 +4,36 @@
     fill: white;
     stroke: black;
     stroke-width: 30px;
+    position: relative;
 
     &__fill {
         &:hover {
+            height: 21px;
+            width: 24px;
             transform-origin: bottom;
             transition: 1s;
-            animation: 2s linear 0s heart-like__fill;
+            animation: heart-like__fill 1s ease-in;
             animation-fill-mode: both;
+            position: absolute;
+            background-color: linear-gradient(-2deg, $primary-color 0%, $secondary-color 100%);
         }
     }    
 }
 
+
 @keyframes heart-like__fill{
     0% {
-        transform: scaleY(0);
         fill: white;
         stroke: white;
     }
     50% {
-        transform: scaleY(0.5);
         fill: $primary-color;
         stroke: $primary-color;
     }
     100% {
-        transform: scaleY(1);
         fill: $secondary-color;
         stroke: $secondary-color;
+        height: 100%;
 
     }
 }

@@ -6,6 +6,7 @@
     z-index: 999;
     height: 63px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 2;
 
     @media (min-width: 1025px) {
         height: 96px;
@@ -22,5 +23,6 @@
     .navbar__logo {
         position: absolute;
         width: 162px;
+        z-index: 1;
     }
 }

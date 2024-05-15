@@ -57,7 +57,7 @@ section.menu__choice {
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    &:hover #slide {
+    &:hover {
         transition: 1s;
         left: 0;
     }
