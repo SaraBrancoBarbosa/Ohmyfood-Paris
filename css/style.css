@@ -257,8 +257,18 @@ Transition douce pour le passage du loader à l'index
   width: 100%;
   animation: loader 3s ease-in;
   animation-fill-mode: forwards;
-  background-color: black;
+  background-color: #99E2D0;
   z-index: 10;
+}
+.loader .fork {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  fill: white;
+  stroke: #F6F6F6;
+  stroke-width: 1px;
+  animation: bounce-in-left 2s ease 400ms;
 }
 .loader .plate {
   display: flex;
@@ -267,7 +277,19 @@ Transition douce pour le passage du loader à l'index
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 8px solid #F6F6F6;
+  border: 5px solid #F6F6F6;
+  background-color: white;
+  animation: bounce-in 2s ease;
+}
+.loader .knife {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  fill: white;
+  stroke: #F6F6F6;
+  stroke-width: 1px;
+  animation: bounce-in-right 2s ease 200ms;
 }
 
 @keyframes loader {
@@ -279,6 +301,54 @@ Transition douce pour le passage du loader à l'index
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes bounce-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 .main-sections {
