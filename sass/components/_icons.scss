@@ -17,17 +17,17 @@
 
 @keyframes heart-like__fill{
     0% {
-        transform: translateY(0);
+        transform: scaleY(0);
         fill: white;
         stroke: white;
     }
     50% {
-        transform: translateY(0.5);
+        transform: scaleY(0.5);
         fill: $primary-color;
         stroke: $primary-color;
     }
     100% {
-        transform: translateY(1);
+        transform: scaleY(1);
         fill: $secondary-color;
         stroke: $secondary-color;
 

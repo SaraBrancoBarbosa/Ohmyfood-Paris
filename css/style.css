@@ -64,6 +64,7 @@ body {
   }
 }
 
+/* Shadows for buttons and cards */
 .navbar {
   display: flex;
   justify-content: center;
@@ -191,17 +192,17 @@ body {
 
 @keyframes heart-like__fill {
   0% {
-    transform: translateY(0);
+    transform: scaleY(0);
     fill: white;
     stroke: white;
   }
   50% {
-    transform: translateY(0.5);
+    transform: scaleY(0.5);
     fill: #9356DC;
     stroke: #9356DC;
   }
   100% {
-    transform: translateY(1);
+    transform: scaleY(1);
     fill: #FF79DA;
     stroke: #FF79DA;
   }
@@ -513,6 +514,32 @@ section.menu__choice .menu__card .card .price {
   color: #353535;
 }
 
+#entrees {
+  animation: grow ease 1s;
+}
+
+#plats {
+  animation: grow ease 1s 500ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+#desserts {
+  animation: grow ease 1s 1000ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 /****** Media queries ***********/
 /* Small devices (Mobile phones, less/equal than 768px) */
 /* Medium devices (tablets, less/equal than 1024px) */
