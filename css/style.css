@@ -65,7 +65,7 @@ body {
 }
 
 /* Shadows for buttons and cards */
-/* Restaurants page: animation of the menu growing */
+/* Restaurants page: growing menu animation */
 #entrees {
   animation: grow ease 1s;
 }
@@ -330,22 +330,22 @@ section.fonctionnement .fonctionnement__card .card p {
   background-color: #9356DC;
   transform: translate(-12px, 0%);
 }
-section.fonctionnement .fonctionnement__card .card .card__content {
+section.fonctionnement .fonctionnement__card .card__content {
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 10px;
   font-weight: 600;
 }
-section.fonctionnement .fonctionnement__card .card .card__content .fa-solid {
+section.fonctionnement .fonctionnement__card .card__content .fa-solid {
   color: #7E7E7E;
   font-size: 1.5rem;
 }
-section.fonctionnement .fonctionnement__card .card .card__content .fa-store {
+section.fonctionnement .fonctionnement__card .card__content .fa-store {
   color: #9356DC;
   font-size: 1.5rem;
 }
-section.fonctionnement .fonctionnement__card .card .card__content h3 {
+section.fonctionnement .fonctionnement__card .card__content h3 {
   font-size: 1rem;
 }
 
@@ -377,12 +377,12 @@ section.restaurants .cards {
     column-gap: 100px;
   }
 }
-section.restaurants .cards .cards__overlap {
+section.restaurants .cards__overlap {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-section.restaurants .cards .cards__overlap .new {
+section.restaurants .cards__overlap .new {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,34 +397,34 @@ section.restaurants .cards .cards__overlap .new {
   grid-area: 1/1;
   margin: auto 0px auto auto;
 }
-section.restaurants .cards .cards__overlap .card {
+section.restaurants .cards__overlap .card {
   background-color: white;
   border-radius: 20px;
   padding: 0px 0px 5px 0px;
   grid-area: 1/1;
 }
-section.restaurants .cards .cards__overlap .card img {
+section.restaurants .cards__overlap .card img {
   object-fit: cover;
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0px 0px;
 }
-section.restaurants .cards .cards__overlap .card .card__content {
+section.restaurants .cards__overlap .card__content {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   padding: 15px;
 }
-section.restaurants .cards .cards__overlap .card .card__content .card__content__text {
+section.restaurants .cards__overlap .card__content__text {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-section.restaurants .cards .cards__overlap .card .card__content .card__content__text h3 {
+section.restaurants .cards__overlap .card__content__text h3 {
   font-size: 1.125rem;
   font-weight: bold;
 }
-section.restaurants .cards .cards__overlap .card .card__content .card__content__text p {
+section.restaurants .cards__overlap .card__content__text p {
   font-size: 1.063rem;
   font-weight: lighter;
 }
@@ -466,18 +466,18 @@ section.restaurants .cards .cards__overlap .card .card__content .card__content__
     margin-top: 338px;
   }
 }
-.menu .menu__title {
+.menu__title {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.menu .menu__title h1 {
+.menu__title h1 {
   font-size: 1.75rem;
   font-family: "Shrikhand", sans-serif;
   font-weight: normal;
 }
 @media (min-width: 1025px) {
-  .menu .menu__title {
+  .menu__title {
     justify-content: center;
     gap: 24px;
   }
@@ -522,6 +522,7 @@ section.menu__choice .menu__card .card {
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 section.menu__choice .menu__card .card .card__content {
   display: flex;
@@ -541,6 +542,42 @@ section.menu__choice .menu__card .card .price {
   color: #353535;
 }
 
+.coche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  position: absolute;
+  background-color: #99E2D0;
+  opacity: 0;
+  border-radius: 0 20px 20px 0;
+  height: 100%;
+  width: 59px;
+  right: -54px;
+}
+.coche .fa-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  color: #99E2D0;
+  background-color: white;
+}
+.coche:hover {
+  animation: slide ease 0.5s forwards;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
 /****** Media queries ***********/
 /* Small devices (Mobile phones, less/equal than 768px) */
 /* Medium devices (tablets, less/equal than 1024px) */

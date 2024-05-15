@@ -79,7 +79,7 @@ section.fonctionnement {
                 transform: translate(-12px, 0%);
             }
 
-            .card__content {
+            &__content {
                 display: flex;
                 align-items: center;
                 gap: 20px;
@@ -131,7 +131,7 @@ section.restaurants {
             column-gap: 100px;
         }
 
-        .cards__overlap {
+        &__overlap {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
@@ -165,13 +165,13 @@ section.restaurants {
                     border-radius: 20px 20px 0px 0px;
                 }
 
-                .card__content {
+                &__content {
                     display: flex;
                     justify-content: space-between;
                     box-sizing: border-box;
                     padding: 15px;
 
-                    .card__content__text {
+                    &__text {
                         display: flex;
                         flex-direction: column;
                         gap: 5px;
