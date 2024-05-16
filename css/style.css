@@ -592,7 +592,7 @@ section.restaurants .cards__overlap .card__content__text p {
   font-family: "Shrikhand", sans-serif;
   font-weight: normal;
 }
-@media (min-width: 1025px) {
+@media (min-width: 769px) {
   .menu__title {
     justify-content: center;
     gap: 24px;
