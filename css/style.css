@@ -269,6 +269,8 @@ Transition douce pour le passage du loader à l'index
   stroke: #F6F6F6;
   stroke-width: 1px;
   animation: bounce-in-left 2s ease 400ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 .loader .plate {
   display: flex;
@@ -290,6 +292,8 @@ Transition douce pour le passage du loader à l'index
   stroke: #F6F6F6;
   stroke-width: 1px;
   animation: bounce-in-right 2s ease 200ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 @keyframes loader {
@@ -316,6 +320,7 @@ Transition douce pour le passage du loader à l'index
     transform: translateX(-10px);
   }
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -348,6 +353,7 @@ Transition douce pour le passage du loader à l'index
     transform: translateX(10px);
   }
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
