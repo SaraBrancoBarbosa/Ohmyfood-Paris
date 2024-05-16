@@ -307,8 +307,12 @@ Transition douce pour le passage du loader à l'index
   90% {
     opacity: 1;
   }
+  99% {
+    z-index: 3;
+  }
   100% {
     opacity: 0;
+    z-index: 0;
   }
 }
 @keyframes bounce-in-left {
