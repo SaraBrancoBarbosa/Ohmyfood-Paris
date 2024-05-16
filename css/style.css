@@ -295,7 +295,7 @@ Transition douce pour le passage du loader à l'index
   align-items: center;
   height: 100px;
   fill: white;
-  animation: bounce-in-right 2s ease 150ms;
+  animation: bounce-in-right 2s ease 100ms;
   opacity: 0;
   animation-fill-mode: forwards;
 }
@@ -333,11 +333,11 @@ Transition douce pour le passage du loader à l'index
     opacity: 0;
     transform: scale(0.3);
   }
-  50% {
+  40% {
     opacity: 1;
     transform: scale(1.05);
   }
-  70% {
+  60% {
     transform: scale(0.9);
   }
   100% {
