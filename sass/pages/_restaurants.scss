@@ -67,6 +67,7 @@ section.menu__choice {
         font-weight: lighter;
         text-transform: uppercase;
 
+        // Green border
         &::after {
             content: "";
             display: flex;
@@ -117,6 +118,7 @@ section.menu__choice {
     }
 }
 
+// Les travaux, en cours pour la coche
 .coche {
     display: flex;
     justify-content: center;
