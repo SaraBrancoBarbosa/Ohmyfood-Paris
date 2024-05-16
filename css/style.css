@@ -483,6 +483,7 @@ section.restaurants .cards {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  z-index: 2;
 }
 @media (min-width: 769px) {
   section.restaurants .cards {
