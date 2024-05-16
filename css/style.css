@@ -266,8 +266,6 @@ Transition douce pour le passage du loader à l'index
   align-items: center;
   height: 100px;
   fill: white;
-  stroke: #F6F6F6;
-  stroke-width: 1px;
   animation: bounce-in-left 2s ease 300ms;
   opacity: 0;
   animation-fill-mode: forwards;
@@ -279,9 +277,17 @@ Transition douce pour le passage du loader à l'index
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 5px solid #F6F6F6;
   background-color: white;
   animation: bounce-in 2s ease;
+}
+.loader .plate__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid #F6F6F6;
 }
 .loader .knife {
   display: flex;
@@ -289,8 +295,6 @@ Transition douce pour le passage du loader à l'index
   align-items: center;
   height: 100px;
   fill: white;
-  stroke: #F6F6F6;
-  stroke-width: 1px;
   animation: bounce-in-right 2s ease 150ms;
   opacity: 0;
   animation-fill-mode: forwards;
