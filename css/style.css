@@ -65,23 +65,6 @@ body {
 }
 
 /* Shadows for buttons and cards */
-/* Restaurants page: growing menu animation */
-#entrees {
-  animation: grow ease 1s;
-}
-
-#plats {
-  animation: grow ease 1s 500ms;
-  opacity: 0;
-  animation-fill-mode: forwards;
-}
-
-#desserts {
-  animation: grow ease 1s 1000ms;
-  opacity: 0;
-  animation-fill-mode: forwards;
-}
-
 @keyframes grow {
   0% {
     opacity: 0;
@@ -90,6 +73,15 @@ body {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 .navbar {
@@ -221,7 +213,6 @@ body {
   animation: heart-like__fill 1s ease-in;
   animation-fill-mode: both;
   position: absolute;
-  background-color: linear-gradient(-2deg, #9356DC 0%, #FF79DA 100%);
 }
 
 @keyframes heart-like__fill {
@@ -252,9 +243,11 @@ Transition douce pour le passage du loader à l'index
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  height: 100vh;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   animation: loader 2500ms ease-in;
   animation-fill-mode: forwards;
   background-color: #99E2D0;
@@ -308,11 +301,12 @@ Transition douce pour le passage du loader à l'index
     opacity: 1;
   }
   99% {
-    z-index: 3;
+    opacity: 0;
+    transform: scale(1);
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    transform: scale(0);
   }
 }
 @keyframes bounce-in-left {
@@ -396,7 +390,7 @@ section.reservation .content {
   gap: 18px;
   padding: 20px;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   section.reservation .content {
     gap: 30px;
   }
@@ -483,7 +477,6 @@ section.restaurants .cards {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  z-index: 2;
 }
 @media (min-width: 769px) {
   section.restaurants .cards {
@@ -495,10 +488,10 @@ section.restaurants .cards {
 }
 section.restaurants .cards__overlap {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  position: relative;
 }
-section.restaurants .cards__overlap .new {
+section.restaurants .cards__overlap.new::before {
+  content: "Nouveau";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -509,15 +502,14 @@ section.restaurants .cards__overlap .new {
   font-weight: bold;
   font-size: 0.875rem;
   background-color: #99E2D0;
-  transform: translate(-13px, -110px);
-  grid-area: 1/1;
-  margin: auto 0px auto auto;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 section.restaurants .cards__overlap .card {
   background-color: white;
   border-radius: 20px;
   padding: 0px 0px 5px 0px;
-  grid-area: 1/1;
 }
 section.restaurants .cards__overlap .card img {
   object-fit: cover;
@@ -633,12 +625,20 @@ section.menu__choice .menu__card {
 }
 section.menu__choice .menu__card .card {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 20px;
   padding: 15px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   position: relative;
+  overflow: hidden;
+}
+section.menu__choice .menu__card .card:hover > .coche {
+  transform: translateX(20px);
+}
+section.menu__choice .menu__card .card:hover > .card__content {
+  width: calc(100% - 120px);
 }
 section.menu__choice .menu__card .card .card__content {
   display: flex;
@@ -646,6 +646,9 @@ section.menu__choice .menu__card .card .card__content {
   gap: 5px;
   font-size: 0.938rem;
   font-weight: lighter;
+  width: calc(100% - 60px);
+  transition: width 0.5s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+  border: 1px dashed orange;
 }
 section.menu__choice .menu__card .card .card__content h3 {
   font-size: 1.125rem;
@@ -665,11 +668,11 @@ section.menu__choice .menu__card .card .price {
   align-self: center;
   position: absolute;
   background-color: #99E2D0;
-  opacity: 0;
-  border-radius: 0 20px 20px 0;
   height: 100%;
-  width: 59px;
-  right: -54px;
+  width: 80px;
+  right: 0;
+  transform: translateX(80px);
+  transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 1.5);
 }
 .coche .fa-check {
   display: flex;
@@ -681,19 +684,28 @@ section.menu__choice .menu__card .card .price {
   color: #99E2D0;
   background-color: white;
 }
-.coche:hover {
-  animation: slide ease 0.5s forwards;
+
+.menu__choice:nth-child(2) {
+  opacity: 0;
+  transform: scale(0.3);
+  animation: grow ease 1s forwards;
+  animation-delay: 0ms;
 }
 
-@keyframes slide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    right: 0;
-  }
+.menu__choice:nth-child(3) {
+  opacity: 0;
+  transform: scale(0.3);
+  animation: grow ease 1s forwards;
+  animation-delay: 500ms;
 }
+
+.menu__choice:nth-child(4) {
+  opacity: 0;
+  transform: scale(0.3);
+  animation: grow ease 1s forwards;
+  animation-delay: 1000ms;
+}
+
 /****** Media queries ***********/
 /* Small devices (Mobile phones, less/equal than 768px) */
 /* Medium devices (tablets, less/equal than 1024px) */

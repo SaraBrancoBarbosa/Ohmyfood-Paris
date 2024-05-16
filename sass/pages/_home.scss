@@ -29,7 +29,7 @@ section.reservation {
         gap: 18px;
         padding: 20px;
 
-        @media (min-width: 1025px) {
+        @include media-desktop {
             gap: 30px;
         }
     }
@@ -123,7 +123,6 @@ section.restaurants {
         display: flex;
         flex-direction: column;
         gap: 18px;
-        z-index: 2;
 
         @media (min-width: 769px) {
             display: grid;
@@ -134,10 +133,10 @@ section.restaurants {
 
         &__overlap {
             display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
+            position: relative;
 
-            .new {
+            &.new::before {
+                content: "Nouveau";
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -148,16 +147,15 @@ section.restaurants {
                 font-weight: bold;
                 font-size: 0.875rem;
                 background-color: $tertiary-color;
-                transform: translate(-13px, -110px);
-                grid-area: 1 / 1;
-                margin: auto 0px auto auto;
+                position: absolute;
+                top: 15px;
+                right: 15px;
             }
 
             .card {
                 background-color: white;
                 border-radius: 20px;
                 padding: 0px 0px 5px 0px;
-                grid-area: 1 / 1;
                 
                 img {
                     object-fit: cover;

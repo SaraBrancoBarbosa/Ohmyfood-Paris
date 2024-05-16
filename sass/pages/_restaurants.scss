@@ -88,12 +88,22 @@ section.menu__choice {
 
         .card {
             display: flex;
-            justify-content: space-between;
+            justify-content: start;
+            gap: 20px; // Espacement du prix
             padding: 15px;
             background-color: white;
             border-radius: 20px;
             @include card-shadow;
             position: relative;
+            overflow: hidden;
+            
+            &:hover > .coche {
+                transform: translateX(20px);
+            }
+
+            &:hover > .card__content {
+                width: calc(100% - 120px);
+            }
 
             .card__content {
                 display: flex;
@@ -101,6 +111,9 @@ section.menu__choice {
                 gap: 5px;
                 font-size: 0.938rem;
                 font-weight: lighter;
+                width: calc(100% - 60px);
+                transition: width 0.5s cubic-bezier(0.2,0.5,0.3,1.5);
+                border: 1px dashed orange;
 
                 h3 {
                     font-size: 1.125rem;
@@ -126,11 +139,12 @@ section.menu__choice {
     align-self: center;
     position: absolute;
     background-color: $tertiary-color;
-    opacity: 0;
-    border-radius: 0 20px 20px 0;
+    // opacity: 0;
     height: 100%;
-    width: 59px;
-    right: -54px;
+    width: 80px;
+    right: 0;
+    transform: translateX(80px);
+    transition: transform 0.5s cubic-bezier(0.2,0.5,0.3,1.5);
     .fa-check {
         display: flex;
         justify-content: center;
@@ -141,17 +155,14 @@ section.menu__choice {
         color: $tertiary-color;
         background-color: white;
     }
-    &:hover {
-        animation: slide ease 0.5s forwards;
-    }
 } 
 
-@keyframes slide {
-    0% {
-        opacity: 1;
-    }
-    100% { 
-        opacity: 1;
-        right: 0;
+// Pour les animations du menu
+@for $i from 2 through 4 {
+    .menu__choice:nth-child(#{$i}) {
+        opacity: 0;
+        transform: scale(.3);
+        animation: grow ease 1s forwards;
+        animation-delay: #{($i - 2)*500}ms;
     }
 }

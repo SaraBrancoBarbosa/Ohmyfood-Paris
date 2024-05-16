@@ -12,30 +12,34 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Restaurants page: growing menu animation */
-#entrees {
-    animation: grow ease 1s;
-}
+// Déplacer les keyframes dans un fichier _animations.scss (dans utils)
 
-#plats {
-    animation: grow ease 1s 500ms;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-
-#desserts {
-    animation: grow ease 1s 1000ms;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-
-  @keyframes grow {
+//Restaurants page: growing menu animation
+@keyframes grow {
     0% {
-      opacity: 0;
-      transform: scale(.3);
+        opacity: 0;
+        transform: scale(.3);
     }
     100% { 
         opacity: 1;
         transform: scale(1); 
     }
-  }
+}
+  
+@keyframes slide {
+    0% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+// Breakpoint. Un pour tablette, un pour desktop
+@mixin media-desktop {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}

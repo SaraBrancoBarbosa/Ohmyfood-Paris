@@ -15,7 +15,6 @@
             animation: heart-like__fill 1s ease-in;
             animation-fill-mode: both;
             position: absolute;
-            background-color: linear-gradient(-2deg, $primary-color 0%, $secondary-color 100%);
         }
     }    
 }
@@ -33,7 +32,6 @@
         fill: $secondary-color;
         stroke: $secondary-color;
         height: 100%;
-
     }
 }
 
