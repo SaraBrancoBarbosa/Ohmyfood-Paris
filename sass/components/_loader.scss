@@ -55,7 +55,6 @@ Transition douce pour le passage du loader à l'index
       animation: bounce-in-right 2s ease 200ms;
       opacity: 0;
       animation-fill-mode:forwards;
-      
     }
 }
 
@@ -109,17 +108,18 @@ Transition douce pour le passage du loader à l'index
 @keyframes bounce-in-right {
   0% {
     opacity: 0;
-    transform: translateX(2000px);
+    transform: translateX(2000px) matrix(-1,0,0,1,0,0);
   }
   60% {
     opacity: 1;
-    transform: translateX(-30px);
+    transform: translateX(-30px) matrix(-1,0,0,1,0,0);
   }
   80% { 
-    transform: translateX(10px); 
+    transform: translateX(10px) matrix(-1,0,0,1,0,0); 
   }
   100% { 
     opacity: 1;
-    transform: translateX(0); 
+    transform: translateX(0) matrix(-1,0,0,1,0,0); 
   }
 }
+
