@@ -155,12 +155,3 @@ section.menu__choice {
     }
 }
 
-// Menu animations
-@for $i from 2 through 4 {
-    .menu__choice:nth-child(#{$i}) {
-        opacity: 0;
-        transform: scale(.3);
-        animation: grow ease 1s forwards;
-        animation-delay: #{($i - 2)*500}ms;
-    }
-}

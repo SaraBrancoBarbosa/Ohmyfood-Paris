@@ -66,6 +66,11 @@ section.fonctionnement {
             background-color: $bg-color;
             border-radius: 20px;
             @include card-shadow;
+            transition: 200ms;
+
+            &:hover {
+                background-color: #F5EDFE;
+            }
 
             p {
                 display: flex;
@@ -134,6 +139,10 @@ section.restaurants {
         &__overlap {
             display: grid;
             position: relative;
+            transition: transform 200ms;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
 
             &.new::before {
                 content: "Nouveau";
@@ -156,6 +165,7 @@ section.restaurants {
                 background-color: white;
                 border-radius: 20px;
                 padding: 0px 0px 5px 0px;
+                @include card-shadow;
                 
                 img {
                     object-fit: cover;

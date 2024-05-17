@@ -428,6 +428,10 @@ section.fonctionnement .fonctionnement__card .card {
   background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  transition: 200ms;
+}
+section.fonctionnement .fonctionnement__card .card:hover {
+  background-color: #F5EDFE;
 }
 section.fonctionnement .fonctionnement__card .card p {
   display: flex;
@@ -490,6 +494,10 @@ section.restaurants .cards {
 section.restaurants .cards__overlap {
   display: grid;
   position: relative;
+  transition: transform 200ms;
+}
+section.restaurants .cards__overlap:hover {
+  transform: scale(1.05);
 }
 section.restaurants .cards__overlap.new::before {
   content: "Nouveau";
@@ -511,6 +519,7 @@ section.restaurants .cards__overlap .card {
   background-color: white;
   border-radius: 20px;
   padding: 0px 0px 5px 0px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 section.restaurants .cards__overlap .card img {
   object-fit: cover;
@@ -684,27 +693,6 @@ section.menu__choice .menu__card .card .price {
   align-items: end;
   font-weight: bold;
   color: #353535;
-}
-
-.menu__choice:nth-child(2) {
-  opacity: 0;
-  transform: scale(0.3);
-  animation: grow ease 1s forwards;
-  animation-delay: 0ms;
-}
-
-.menu__choice:nth-child(3) {
-  opacity: 0;
-  transform: scale(0.3);
-  animation: grow ease 1s forwards;
-  animation-delay: 500ms;
-}
-
-.menu__choice:nth-child(4) {
-  opacity: 0;
-  transform: scale(0.3);
-  animation: grow ease 1s forwards;
-  animation-delay: 1000ms;
 }
 
 /*# sourceMappingURL=style.css.map */
