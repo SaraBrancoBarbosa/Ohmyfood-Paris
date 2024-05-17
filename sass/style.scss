@@ -1,16 +1,11 @@
-@import "./base/variables"; // Les couleurs (peut-être fonts plus tard ?)
-@import "./base/base"; // Le css général
-@import "./utils/mixins"; // Box-shadows pour le moment
-@import "./layouts/header"; // Header
-@import "./layouts/footer"; // Footer
-@import "./components/buttons"; // Boutons
-@import "./components/icons"; // Icon coeur
-@import "./components/loader"; // Le loader ira ici :D
-@import "./pages/home"; // La Homepage
-@import "./pages/restaurants"; // La page type pour les restaurants
-
-/****** Media queries ***********/
-/* Small devices (Mobile phones, less/equal than 768px) */
-/* Medium devices (tablets, less/equal than 1024px) */
-/* Large devices (desktop, large desktop, less/equal than 1440px) */
-
+@import "./base/variables";
+@import "./utils/mixins";
+@import "./base/animations";
+@import "./base/base";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./components/buttons";
+@import "./components/icons";
+@import "./components/loader";
+@import "./pages/home";
+@import "./pages/restaurants";

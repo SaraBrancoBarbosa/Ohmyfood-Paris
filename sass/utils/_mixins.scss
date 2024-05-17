@@ -1,4 +1,4 @@
-/* Shadows for buttons and cards */
+// Shadows for buttons and cards
 @mixin btn-shadow {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     transition: 400ms ease-in-out;
@@ -12,32 +12,13 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-// Déplacer les keyframes dans un fichier _animations.scss (dans utils)
-
-//Restaurants page: growing menu animation
-@keyframes grow {
-    0% {
-        opacity: 0;
-        transform: scale(.3);
-    }
-    100% { 
-        opacity: 1;
-        transform: scale(1); 
-    }
-}
-  
-@keyframes slide {
-    0% {
-        opacity: 1;
-    }
-    100% { 
-        opacity: 1;
-        transform: translateX(0);
+// Breakpoints
+@mixin media-tablet {
+    @media screen and (min-width: 768px) {
+        @content;
     }
 }
 
-
-// Breakpoint. Un pour tablette, un pour desktop
 @mixin media-desktop {
     @media screen and (min-width: 1024px) {
         @content;

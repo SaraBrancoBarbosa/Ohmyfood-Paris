@@ -1,0 +1,91 @@
+// Restaurants pages: growing menu animation
+@for $i from 2 through 4 {
+    .menu__choice:nth-child(#{$i}) {
+        opacity: 0;
+        transform: scale(.3);
+        animation: grow ease 1s forwards;
+        animation-delay: #{($i - 2)*500}ms;
+    }
+}
+
+@keyframes grow {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+    100% { 
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+
+// Loader animations
+@keyframes loader {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    99% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
+}
+
+@keyframes bounce-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+  80% { 
+    transform: translateX(-10px); 
+  }
+  100% { 
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  60% { 
+    transform: scale(.9); 
+  }
+  100% { 
+    transform: scale(1); 
+  }
+}
+
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px) matrix(-1,0,0,1,0,0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px) matrix(-1,0,0,1,0,0);
+  }
+  80% { 
+    transform: translateX(10px) matrix(-1,0,0,1,0,0); 
+  }
+  100% { 
+    opacity: 1;
+    transform: translateX(0) matrix(-1,0,0,1,0,0); 
+  }
+}

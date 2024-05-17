@@ -1,4 +1,100 @@
-@charset "UTF-8";
+.menu__choice:nth-child(2) {
+  opacity: 0;
+  transform: scale(0.3);
+  animation: grow ease 1s forwards;
+  animation-delay: 0ms;
+}
+
+.menu__choice:nth-child(3) {
+  opacity: 0;
+  transform: scale(0.3);
+  animation: grow ease 1s forwards;
+  animation-delay: 500ms;
+}
+
+.menu__choice:nth-child(4) {
+  opacity: 0;
+  transform: scale(0.3);
+  animation: grow ease 1s forwards;
+  animation-delay: 1000ms;
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes bounce-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px) matrix(-1, 0, 0, 1, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px) matrix(-1, 0, 0, 1, 0, 0);
+  }
+  80% {
+    transform: translateX(10px) matrix(-1, 0, 0, 1, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) matrix(-1, 0, 0, 1, 0, 0);
+  }
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -10,7 +106,7 @@ h1, h2 {
   font-size: 1.5rem;
   margin: 0px;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   h1, h2 {
     font-size: 2.5rem;
   }
@@ -53,37 +149,17 @@ body {
   width: 100%;
   min-width: 320px;
 }
-@media (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .main-container {
     max-width: 1024px;
   }
 }
-@media (min-width: 769px) and (min-width: 1025px) {
+@media screen and (min-width: 768px) and (min-width: 1024px) {
   .main-container {
     max-width: 100%;
   }
 }
 
-/* Shadows for buttons and cards */
-@keyframes grow {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes slide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 .navbar {
   display: flex;
   justify-content: center;
@@ -94,7 +170,7 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 2;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .navbar {
     height: 96px;
   }
@@ -123,7 +199,7 @@ body {
   gap: 16px;
   padding: 20px;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .footer .footer__container {
     flex-direction: row-reverse;
     gap: 50px;
@@ -137,7 +213,7 @@ body {
   flex-direction: column;
   gap: 7px;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .footer .footer__container .footer__content {
     flex-direction: row;
     gap: 50px;
@@ -149,7 +225,7 @@ body {
   gap: 7px;
   list-style-type: none;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .footer .footer__container .footer__content ul {
     flex-direction: row;
     gap: 16px;
@@ -230,15 +306,6 @@ body {
     height: 100%;
   }
 }
-/* Idée :
-Faire une assiette au milieu (stroke-dasharray et stroke-dashoffset pour animer le contour de l'assiette ?)
-Fourchette apparait de la gauche (slide in ?)
-Une fois la fourchette arrivée, couteau apparaît de la droite (tranchant tourné vers l'assiette)
-
-Couleur de fond : $tertiary-color
-
-Transition douce pour le passage du loader à l'index
- */
 .loader {
   display: flex;
   justify-content: center;
@@ -293,72 +360,6 @@ Transition douce pour le passage du loader à l'index
   animation-fill-mode: forwards;
 }
 
-@keyframes loader {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0);
-  }
-}
-@keyframes bounce-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateX(30px);
-  }
-  80% {
-    transform: translateX(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes bounce-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  40% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  60% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes bounce-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(2000px) matrix(-1, 0, 0, 1, 0, 0);
-  }
-  60% {
-    opacity: 1;
-    transform: translateX(-30px) matrix(-1, 0, 0, 1, 0, 0);
-  }
-  80% {
-    transform: translateX(10px) matrix(-1, 0, 0, 1, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) matrix(-1, 0, 0, 1, 0, 0);
-  }
-}
 .main-sections {
   display: flex;
   flex-direction: column;
@@ -406,7 +407,7 @@ section.fonctionnement .fonctionnement__content {
   flex-direction: column;
   gap: 25px;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   section.fonctionnement .fonctionnement__content {
     max-width: 1080px;
     margin: 0 auto;
@@ -467,7 +468,7 @@ section.restaurants .restaurants__content {
   flex-direction: column;
   gap: 25px;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   section.restaurants .restaurants__content {
     max-width: 1080px;
     margin: 0 auto;
@@ -478,7 +479,7 @@ section.restaurants .cards {
   flex-direction: column;
   gap: 18px;
 }
-@media (min-width: 769px) {
+@media screen and (min-width: 768px) {
   section.restaurants .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -549,7 +550,7 @@ section.restaurants .cards__overlap .card__content__text p {
   position: absolute;
   z-index: 1;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .main-sections__menu img {
     height: 383px;
   }
@@ -568,7 +569,7 @@ section.restaurants .cards__overlap .card__content__text p {
   z-index: 2;
   margin-top: 226px;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .menu {
     max-width: 1055px;
     margin-top: 338px;
@@ -584,7 +585,7 @@ section.restaurants .cards__overlap .card__content__text p {
   font-family: "Shrikhand", sans-serif;
   font-weight: normal;
 }
-@media (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .menu__title {
     justify-content: center;
     gap: 24px;
@@ -613,7 +614,7 @@ section.menu__choice h2::after {
   width: 40px;
   height: 7px;
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   section.menu__choice {
     max-width: 634px;
   }
@@ -634,11 +635,35 @@ section.menu__choice .menu__card .card {
   position: relative;
   overflow: hidden;
 }
-section.menu__choice .menu__card .card:hover > .coche {
+section.menu__choice .menu__card .card:hover > .checked {
   transform: translateX(20px);
 }
 section.menu__choice .menu__card .card:hover > .card__content {
   width: calc(100% - 120px);
+}
+section.menu__choice .menu__card .card .checked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  position: absolute;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 80px;
+  right: 0;
+  transform: translateX(80px);
+  transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+}
+section.menu__choice .menu__card .card .checked .fa-check {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  color: #99E2D0;
+  background-color: white;
 }
 section.menu__choice .menu__card .card .card__content {
   display: flex;
@@ -661,30 +686,6 @@ section.menu__choice .menu__card .card .price {
   color: #353535;
 }
 
-.coche {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  position: absolute;
-  background-color: #99E2D0;
-  height: 100%;
-  width: 80px;
-  right: 0;
-  transform: translateX(80px);
-  transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 1.5);
-}
-.coche .fa-check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20px;
-  width: 20px;
-  border-radius: 50px;
-  color: #99E2D0;
-  background-color: white;
-}
-
 .menu__choice:nth-child(2) {
   opacity: 0;
   transform: scale(0.3);
@@ -705,10 +706,5 @@ section.menu__choice .menu__card .card .price {
   animation: grow ease 1s forwards;
   animation-delay: 1000ms;
 }
-
-/****** Media queries ***********/
-/* Small devices (Mobile phones, less/equal than 768px) */
-/* Medium devices (tablets, less/equal than 1024px) */
-/* Large devices (desktop, large desktop, less/equal than 1440px) */
 
 /*# sourceMappingURL=style.css.map */
