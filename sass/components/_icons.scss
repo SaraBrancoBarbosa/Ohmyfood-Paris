@@ -1,38 +1,31 @@
+// Like button
+.heart {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
 .heart-like {
-    height: 21px;
+    height: 23px;
     width: 24px;
     fill: white;
     stroke: black;
-    stroke-width: 30px;
-    position: relative;
-
-    &__fill {
-        &:hover {
-            height: 21px;
-            width: 24px;
-            transform-origin: bottom;
-            transition: 1s;
-            animation: heart-like__fill 1s ease-in;
-            animation-fill-mode: both;
-            position: absolute;
-        }
-    }    
-}
-
-@keyframes heart-like__fill{
-    0% {
-        fill: white;
-        stroke: white;
-    }
-    50% {
-        fill: $primary-color;
-        stroke: $primary-color;
-    }
-    100% {
-        fill: $secondary-color;
-        stroke: $secondary-color;
-        height: 100%;
+    stroke-width: 20px;
+    position: sticky;
+    transition: 400ms ease-in;
+    background-color: white;
+    &:hover {
+        opacity: 0;
     }
 }
 
-//fill: linear-gradient(-2deg, $primary-color 0%, $secondary-color 100%);
+.fa-heart {
+    font-size: 24px;
+    transform-origin: bottom;
+    position: absolute;
+    background: linear-gradient(-2deg, $secondary-color 0%, $primary-color 100%);
+    background-clip: text;
+    color: transparent;
+    transition: 400ms ease-in;
+    opacity: 1;  
+}
