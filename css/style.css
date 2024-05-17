@@ -287,7 +287,6 @@ body {
   stroke-width: 20px;
   position: sticky;
   transition: 400ms ease-in;
-  background-color: white;
 }
 .heart-like:hover {
   opacity: 0;
@@ -634,7 +633,7 @@ section.menu__choice .menu__card {
 section.menu__choice .menu__card .card {
   display: flex;
   justify-content: start;
-  gap: 20px;
+  gap: 5px;
   padding: 15px;
   background-color: white;
   border-radius: 20px;
@@ -646,7 +645,7 @@ section.menu__choice .menu__card .card:hover > .checked {
   transform: translateX(20px);
 }
 section.menu__choice .menu__card .card:hover > .card__content {
-  width: calc(100% - 120px);
+  width: calc(100% - 80px);
 }
 section.menu__choice .menu__card .card .checked {
   display: flex;
@@ -678,13 +677,21 @@ section.menu__choice .menu__card .card .card__content {
   gap: 5px;
   font-size: 0.938rem;
   font-weight: lighter;
-  width: calc(100% - 60px);
+  width: calc(100% - 50px);
   transition: width 0.5s cubic-bezier(0.2, 0.5, 0.3, 1.5);
   border: 1px dashed orange;
+}
+section.menu__choice .menu__card .card .card__content p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 section.menu__choice .menu__card .card .card__content h3 {
   font-size: 1.125rem;
   font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 section.menu__choice .menu__card .card .price {
   display: flex;
