@@ -279,28 +279,30 @@ body {
   align-items: start;
 }
 
-.heart-like {
+.heart-fill {
+  height: 23px;
+  width: 24px;
+  stroke: black;
+  stroke-width: 20px;
+  fill: url(#heart-fill);
+  position: sticky;
+  stroke-width: 0px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.heart-empty {
   height: 23px;
   width: 24px;
   fill: white;
   stroke: black;
   stroke-width: 20px;
-  position: sticky;
-  transition: 400ms ease-in;
-}
-.heart-like:hover {
-  opacity: 0;
-}
-
-.fa-heart {
-  font-size: 24px;
-  transform-origin: bottom;
   position: absolute;
-  background: linear-gradient(-2deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
-  color: transparent;
   transition: 400ms ease-in;
-  opacity: 1;
+  cursor: pointer;
+}
+.heart-empty:hover {
+  opacity: 0;
 }
 
 .loader {

@@ -5,26 +5,29 @@
     align-items: start;
 }
 
-.heart-like {
+.heart-fill {
+    height: 23px;
+    width: 24px;
+    stroke: black;
+    stroke-width: 20px;
+    fill: url(#heart-fill);
+    position: sticky;
+    stroke-width: 0px;
+    opacity: 1;
+    cursor: pointer;
+}
+.heart-empty {
     height: 23px;
     width: 24px;
     fill: white;
     stroke: black;
     stroke-width: 20px;
-    position: sticky;
+    position: absolute;
     transition: 400ms ease-in;
+    cursor: pointer;
+    
     &:hover {
         opacity: 0;
     }
 }
 
-.fa-heart {
-    font-size: 24px;
-    transform-origin: bottom;
-    position: absolute;
-    background: linear-gradient(-2deg, $secondary-color 0%, $primary-color 100%);
-    background-clip: text;
-    color: transparent;
-    transition: 400ms ease-in;
-    opacity: 1;  
-}
