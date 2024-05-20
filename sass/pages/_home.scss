@@ -140,6 +140,7 @@ section.restaurants {
             display: grid;
             position: relative;
             transition: transform 200ms;
+            
                     &:hover {
                         transform: scale(1.05);
                     }
