@@ -11,3 +11,218 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/png" href="../images/favicon/favicon.png">
 </head>
+
+<body>
+    <div class="main-container">
+
+        <header>
+            <nav class="navbar">
+                <a class="navbar__back" href="../index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <img class="navbar__logo" src="../images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood Paris">
+            </nav>
+        </header>
+
+        <main class="main-sections__menu">
+            <img 
+                src="../images/restaurants/toa-heftiba__small.jpg"
+                srcset="
+                    ../images/restaurants/toa-heftiba__small.jpg 820w,
+                    ../images/restaurants/toa-heftiba__large.jpg 2000w,"
+                alt="Image d'un plat du restaurant À la française">
+            <div class="menu">
+                <div class="menu__title">
+                    <h1>À la française</h1>
+                    <!-- Je n'ai pas réussi à faire le lien entre le fichier svg et le css, donc pour l'instant j'ai écrit en html -->
+                    <div class="heart">
+                        <svg class="heart-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                            <defs>
+                                <linearGradient id="heart-fill" x1="0%" x2="0%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#FF79DA" />
+                                    <stop offset="100%" stop-color="#9356DC" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg class="heart-empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                        </svg>
+                    </div>
+                    <!-- Fin code coeur -->
+                </div>
+
+                <!-- Menu : entrées -->
+                <section class="menu__choice">
+                    <h2>Entrées</h2>
+                    <div class="menu__card">
+                        <div class="card">
+                            <div class="card__content">
+                                <h3>Tartare de poulpe acidulé</h3>
+                                <p>Aux zestes d'orange</p>
+                            </div>
+                            <p class="price">
+                                25<span class="euro">€</span>
+                            </p>
+                            <div class="checked">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__content">
+                                <h3>Velouté de légumes d'antan</h3>
+                                <p>Carotte, panais, topinambour</p>
+                            </div>
+                            <p class="price">
+                                35<span class="euro">€</span>
+                            </p>
+                            <div class="checked">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__content">
+                                <h3>Soupe à l'oignon</h3>
+                                <p>Revisitée</p>
+                            </div>
+                            <p class="price">
+                                20<span class="euro">€</span>
+                            </p>
+                            <div class="checked">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Menu : plats -->
+                <section class="menu__choice">
+                    <h2>Plats</h2>
+                    <div class="menu__card">
+                        <div class="card">
+                            <div class="card__content">
+                                <h3>Coquilles Saint-Jacques</h3>
+                                <p>Accompagnées d'une purée de panais</p>
+                            </div>
+                            <p class="price">
+                                40<span class="euro">€</span>
+                            </p>
+                            <div class="checked">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__content">
+                                <h3>Magret de canard</h3>
+                                <p>Et parmentier de pommes de terre</p>
+                            </div>
+                            <p class="price">
+                                35<span class="euro">€</span>
+                            </p>
+                            <div class="checked">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__content">
+                                <h3>Pigeonneau d'Ille-et-Vilaine</h3>
+                                <p>Sur son lit de gnocchis aux légumes</p>
+                            </div>
+                            <p class="price">
+                                44<span class="euro">€</span>
+                            </p>
+                            <div class="checked">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Menu : desserts -->
+                <section class="menu__choice">
+                    <h2>Desserts</h2>
+                    <div class="menu__card">
+                        <div class="card">
+                            <div class="card__content">
+                                <h3>Pétales de violettes glacés</h3>
+                                <p>Et purée de noisettes</p>
+                            </div>
+                            <p class="price">
+                                18<span class="euro">€</span>
+                            </p>
+                            <div class="checked">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__content">
+                                <h3>Fondant au chocolat</h3>
+                                <p>Revisité</p>
+                            </div>
+                            <p class="price">
+                                22<span class="euro">€</span>
+                            </p>
+                            <div class="checked">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__content">
+                                <h3>Millefeuille croustillant</h3>
+                                <p>Myrtilles et pâte d'amande</p>
+                            </div>
+                            <p class="price">
+                                23<span class="euro">€</span>
+                            </p>
+                            <div class="checked">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Commander -->
+                <a href="#" class="btn">
+                    Commander
+                </a>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <h4>ohmyfood</h4>
+                <div class="footer__content">
+                    <ul class="footer__content--bold">
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-utensils"></i>
+                                Proposer un restaurant
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-handshake-angle"></i>
+                                Devenir partenaire
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Mentions légales
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:#">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+</body>
+</html>
