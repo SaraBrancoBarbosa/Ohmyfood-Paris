@@ -280,23 +280,12 @@ body {
 }
 
 .heart-fill {
-  height: 23px;
-  width: 24px;
-  stroke: black;
-  stroke-width: 20px;
-  fill: url(#heart-fill);
   position: sticky;
-  stroke-width: 0px;
   opacity: 1;
   cursor: pointer;
 }
 
 .heart-empty {
-  height: 23px;
-  width: 24px;
-  fill: white;
-  stroke: black;
-  stroke-width: 20px;
   position: absolute;
   transition: 400ms ease-in;
   cursor: pointer;
