@@ -2,7 +2,7 @@
     color: white;
     background-color: $quaternary-color;
 
-    .footer__container {
+    &__container {
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -39,7 +39,7 @@
                 }
             }
 
-            .footer__content--bold {
+            &--bold {
                 font-weight: 600;
                 
                 .fa-solid {
