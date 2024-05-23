@@ -3,26 +3,23 @@
     display: flex;
     justify-content: center;
     align-items: start;
+    position: relative;
+    width: 24px;
 }
 
 .heart-fill {
-    // height: 23px;
-    // width: 24px;
-    // stroke-width: 0px;
-    // fill: url(#heart-fill);
-    position: sticky;
+    position: absolute;
     opacity: 1;
     cursor: pointer;
+    top: 0;
+    left: 0;
 }
 .heart-empty {
-    // height: 23px;
-    // width: 24px;
-    // fill: white;
-    // stroke: black;
-    // stroke-width: 20px;
     position: absolute;
     transition: 400ms ease-in;
     cursor: pointer;
+    top: 0;
+    left: 0;
     
     &:hover {
         opacity: 0;

@@ -88,7 +88,7 @@ section.menu__choice {
         .card {
             display: flex;
             justify-content: start;
-            gap: 25px;
+            gap: 5px;
             padding: 15px;
             background-color: white;
             border-radius: 20px;
@@ -101,7 +101,7 @@ section.menu__choice {
             }
 
             &:hover > .card__content {
-                width: calc(100% - 120px);
+                width: calc(100% - 85px);
             }
 
             .checked {
@@ -136,7 +136,7 @@ section.menu__choice {
                 gap: 5px;
                 font-size: 0.938rem;
                 font-weight: lighter;
-                width: calc(100% - 50px);
+                width: calc(100% - 25px);
                 transition: width 0.5s cubic-bezier(0.2,0.5,0.3,1.5);
 
                 p {

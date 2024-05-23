@@ -185,22 +185,7 @@ body {
   position: absolute;
   width: 162px;
 }
-.navbar .navbar__logo__loader {
-  display: flex;
-  height: 100px;
-  animation: 800ms header-loader ease forwards;
-  animation-delay: 2500ms;
-  transform: scale(1) translateY(50vh);
-}
 
-@keyframes header-loader {
-  0% {
-    transform: scale(1) translateY(50vh);
-  }
-  100% {
-    transform: scale(0.35) translatex(-380px);
-  }
-}
 .footer {
   color: white;
   background-color: #353535;
@@ -288,18 +273,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
+  position: relative;
+  width: 24px;
 }
 
 .heart-fill {
-  position: sticky;
+  position: absolute;
   opacity: 1;
   cursor: pointer;
+  top: 0;
+  left: 0;
 }
 
 .heart-empty {
   position: absolute;
   transition: 400ms ease-in;
   cursor: pointer;
+  top: 0;
+  left: 0;
 }
 .heart-empty:hover {
   opacity: 0;
@@ -447,11 +438,11 @@ section.fonctionnement .fonctionnement__card .card__content {
   padding: 10px;
   font-weight: 600;
 }
-section.fonctionnement .fonctionnement__card .card__content .fa-solid {
+section.fonctionnement .fonctionnement__card .card__content .icon {
   color: #7E7E7E;
   font-size: 1.5rem;
 }
-section.fonctionnement .fonctionnement__card .card__content .fa-store {
+section.fonctionnement .fonctionnement__card .card__content .active {
   color: #9356DC;
   font-size: 1.5rem;
 }
@@ -632,7 +623,7 @@ section.menu__choice .menu__card {
 section.menu__choice .menu__card .card {
   display: flex;
   justify-content: start;
-  gap: 25px;
+  gap: 5px;
   padding: 15px;
   background-color: white;
   border-radius: 20px;
@@ -644,7 +635,7 @@ section.menu__choice .menu__card .card:hover > .checked {
   transform: translateX(20px);
 }
 section.menu__choice .menu__card .card:hover > .card__content {
-  width: calc(100% - 120px);
+  width: calc(100% - 85px);
 }
 section.menu__choice .menu__card .card .checked {
   display: flex;
@@ -676,7 +667,7 @@ section.menu__choice .menu__card .card .card__content {
   gap: 5px;
   font-size: 0.938rem;
   font-weight: lighter;
-  width: calc(100% - 50px);
+  width: calc(100% - 25px);
   transition: width 0.5s cubic-bezier(0.2, 0.5, 0.3, 1.5);
 }
 section.menu__choice .menu__card .card .card__content p {
