@@ -156,7 +156,7 @@ body {
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
   .main-container {
-    max-width: 100%;
+    max-width: 1920px;
   }
 }
 
@@ -542,6 +542,7 @@ section.restaurants .cards__overlap .card__content__text p {
 .main-sections__menu__img {
   height: 275px;
   width: 100%;
+  max-width: 1920px;
   object-fit: cover;
   position: absolute;
   z-index: 1;
