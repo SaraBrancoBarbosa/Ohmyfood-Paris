@@ -185,7 +185,22 @@ body {
   position: absolute;
   width: 162px;
 }
+.navbar .navbar__logo__loader {
+  display: flex;
+  height: 100px;
+  animation: 800ms header-loader ease forwards;
+  animation-delay: 2500ms;
+  transform: scale(1) translateY(50vh);
+}
 
+@keyframes header-loader {
+  0% {
+    transform: scale(1) translateY(50vh);
+  }
+  100% {
+    transform: scale(0.35) translatex(-380px);
+  }
+}
 .footer {
   color: white;
   background-color: #353535;
@@ -249,7 +264,6 @@ body {
   background: linear-gradient(-2deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   transition: 400ms ease-in-out;
-  z-index: 2;
 }
 .btn:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
@@ -267,7 +281,6 @@ body {
   left: 0;
   background-color: rgba(255, 255, 255, 0.0823529412);
   opacity: 0;
-  z-index: 1;
   transition: 250ms ease-in-out;
 }
 
@@ -301,8 +314,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  animation: loader 2500ms ease-in;
-  animation-fill-mode: forwards;
+  animation: loader 2500ms ease-in forwards;
   background-color: #99E2D0;
   z-index: 3;
 }
@@ -312,9 +324,8 @@ body {
   align-items: center;
   height: 100px;
   fill: white;
-  animation: bounce-in-left 2s ease 300ms;
+  animation: bounce-in-left 2s ease 300ms forwards;
   opacity: 0;
-  animation-fill-mode: forwards;
 }
 .loader .plate {
   display: flex;
@@ -341,9 +352,8 @@ body {
   align-items: center;
   height: 100px;
   fill: white;
-  animation: bounce-in-right 2s ease 100ms;
+  animation: bounce-in-right 2s ease 100ms forwards;
   opacity: 0;
-  animation-fill-mode: forwards;
 }
 
 .main-sections {
@@ -480,7 +490,7 @@ section.restaurants .cards {
 section.restaurants .cards__overlap {
   display: grid;
   position: relative;
-  transition: transform 200ms;
+  transition: 200ms;
 }
 section.restaurants .cards__overlap:hover {
   transform: scale(1.05);

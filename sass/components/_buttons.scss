@@ -10,7 +10,6 @@
     color: white;
     background: linear-gradient(-2deg, $primary-color 0%, $secondary-color 100%); 
     @include btn-shadow;
-    z-index: 2;
 
     &:hover {
         &::after {
@@ -27,7 +26,6 @@
         left: 0;
         background-color: #ffffff15;
         opacity: 0;
-        z-index: 1;
         transition: 250ms ease-in-out;
     }
 }

@@ -139,7 +139,7 @@ section.restaurants {
         &__overlap {
             display: grid;
             position: relative;
-            transition: transform 200ms;
+            transition: 200ms;
             
                     &:hover {
                         transform: scale(1.05);

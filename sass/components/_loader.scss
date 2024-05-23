@@ -7,8 +7,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    animation: loader 2500ms ease-in;
-    animation-fill-mode: forwards;
+    animation: loader 2500ms ease-in forwards;
     background-color: $tertiary-color;
     z-index: 3;
 
@@ -18,9 +17,8 @@
       align-items: center;
       height: 100px;
       fill: white;
-      animation: bounce-in-left 2s ease 300ms;
+      animation: bounce-in-left 2s ease 300ms forwards;
       opacity: 0;
-      animation-fill-mode:forwards;
     }
 
     .plate {
@@ -50,8 +48,7 @@
       align-items: center;
       height: 100px;
       fill: white;
-      animation: bounce-in-right 2s ease 100ms;
+      animation: bounce-in-right 2s ease 100ms forwards;
       opacity: 0;
-      animation-fill-mode:forwards;
     }
 }
