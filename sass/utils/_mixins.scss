@@ -13,7 +13,7 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-// Breakpoints
+// Breakpoints for responsive design
 @mixin media-tablet {
     @media screen and (min-width: 768px) {
         @content;
