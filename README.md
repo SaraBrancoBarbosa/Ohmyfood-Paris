@@ -1,4 +1,4 @@
-# Ohmyfood-Paris
+# Ohmyfood Paris
 
 Projet Ohmyfood Paris : dynamiser une page web avec des animations CSS
 
