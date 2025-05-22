@@ -1,6 +1,6 @@
 ![Logo de l'application Ohmyfood Paris.](images/logo/ohmyfood.png)
 
-# Ohmyfood Paris
+# Ohmyfood Paris (entreprise fictive)
 
 Projet Ohmyfood Paris : dynamiser une page web avec des animations CSS
 
